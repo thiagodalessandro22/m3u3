@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distancia</title>
+    <script>
+        const medios = ['A pie', 'Bicicleta', 'Colectivo', 'Auto', 'Avion'];
+        const nombre = prompt('Ingrese su nombre:', '');
+        const distancia = parseInt(prompt('Ingrese la distancia del trayecto:', ''));
+
+        if(Number.isNaN(distancia)){
+            document.write('La distancia ingresada no es válida. Vuelve a ingresarla.');
+        }
+        else if (distancia <= 1000) {
+            document.write(`${nombre}, deberías ir ${medios[0]}.`);
+        }
+        else if (distancia > 1000 && distancia <= 10000 ) {
+            document.write(`${nombre}, deberías ir en ${medios[1]}.`);
+        }
+        else if (distancia > 10000 && distancia <= 30000) {
+            document.write(`${nombre}, deberías ir en ${medios[2]}.`);
+        }
+        else if (distancia > 30000 && distancia <= 100000) {
+            document.write(`${nombre}, deberías ir en ${medios[3]}.`);
+        }
+        else{
+            document.write(`${nombre}, deberías ir en ${medios[4]}.`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
